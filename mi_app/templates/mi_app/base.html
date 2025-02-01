@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mi_app/styles.css' %}">
+    <script src="{% static 'mi_app/script.js' %}"></script>
 </head>
 <body>
     <header>
@@ -15,7 +18,7 @@
     </main>
 
     <footer>
-        <p>2025 - Creado por mí</p>
+        <p>2025 - Curso de Django</p>
     </footer>
 </body>
 </html>

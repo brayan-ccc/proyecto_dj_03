@@ -1,0 +1,9 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+{% block content %}
+    <h1>Mi mascota</h1>
+    <p>Nombre: {{ datos_mascota.tipo }}</p>
+    <p>Foto: {{ datos_mascota.foto }}</p>
+    <img src="{% static 'mi_app/logo.png' %}" alt="Foto de mi perrito" width="400px">
+   
+{% endblock  %}

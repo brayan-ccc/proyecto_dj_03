@@ -1,0 +1,11 @@
+{% extends "mi_app/base.html" %}
+
+{% block content %}
+    <h1>¿Es mayor de edad?</h1>
+    {% if usuario.edad >= 18 %}
+        <p> {{ usuario.nombre }}  es mayor de edad, porque tiene  {{ usuario.edad }} años</p>
+    {% else %}
+        <p>{{ usuario.nombre }} Es MENOR de edad, solo tiene {{ usuario.edad }} años </p>
+    {% endif %}
+
+{% endblock  %}

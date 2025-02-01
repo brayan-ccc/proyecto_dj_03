@@ -7,4 +7,8 @@ urlpatterns = [
     path('datos/<str:nombre>/<int:edad>', views.mostrar_datos),
     path('hola_plantilla/<str:nombre>',views.hola_plantilla),
     path('saludo_herencia/<str:nombre>', views.saludo_herencia),
+    path('simple/', views.simple),
+    path('mascota/', views.mascota),
+    path('num/', views.lista_numeros),
+    path('es_mayor/', views.edad),
 ]

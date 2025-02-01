@@ -18,9 +18,33 @@ def mostrar_datos(request, nombre, edad):
 def hola_plantilla(request, nombre):
     contexto = {
         'nombre' : nombre,
-        'fecha' : datetime.now().strftime("%d/%m/%Y"),
+        'fecha' : datetime.now(),
     }
     return render(request, 'mi_app/hola.html', contexto)
 
 def saludo_herencia(request, nombre):
     return render(request,'mi_app/saludo.html', {'nombre':nombre}) 
+
+def simple(request):
+    return render(request,'mi_app/pagina_simple.html')
+
+def mascota(request):
+    datos_mascota = {
+        "nombre" : "Firulais",
+        "tipo" : "perro",
+        "edad" : 5,
+        "foto" : "🐶",
+    }
+    return render(request,'mi_app/mascota.html',{'datos_mascota':datos_mascota})
+
+def lista_numeros(request):
+    numeros = ["a",2,3,4,"b",6,7,8,9,10]
+    return render(request,'mi_app/numeros.html',{'numeros':numeros})
+
+def edad(request):
+    usuario = {
+        "nombre" : "Juancito",
+        "profesion" : "programador",
+        "edad" : 90,
+    }
+    return render(request,'mi_app/es_mayor.html', {'usuario':usuario})     

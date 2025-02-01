@@ -1,0 +1,20 @@
+{% extends "mi_app/base.html" %}
+
+{% block content %}
+    <h1>Las gestiones desde 2020 a 2025</h1>
+    <p>Primera: {{ numeros.0 }}</p>
+    <p>Tercero: {{ numeros.2 }}</p>
+    <p>Cuarto: {{ numeros.3 }}</p>
+
+    <h2>Las gestiones desde 2020 a 2025 utilizando FOR</h1>
+    
+    <ol>
+    {% for numero  in numeros %}
+        <li> {{ numero }}
+    {% empty %}
+        <p> No hay datos para mostrar </p>
+    {% endfor %}
+    </ol>
+
+
+{% endblock  %}
