@@ -1,8 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from datetime import datetime
+from .models import Curso
 
 # Create your views here.
+def detalle_curso(request, curso_id):
+    curso = get_object_or_404(Curso, id = curso_id)
+    estudiantes = curso.estudiantes.all()
+
+    return render(request, 'mi_app/detalle_curso.html', {'curso':curso, 'estudiantes':estudiantes})
+
+
+
 def hola_mundo(request):
     return HttpResponse("<h2>Hola mundo desde DJANGO 5.1</h2>")
 

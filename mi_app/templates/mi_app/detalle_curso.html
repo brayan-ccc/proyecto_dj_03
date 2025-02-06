@@ -1,0 +1,21 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Curso: {{ curso.nombre }} </h1>
+<p> <strong>Fecha de inicio: </strong>  {{ curso.fecha_inicio }} </p>
+<p><strong>Descripción: </strong>{{ curso.descripcion }} </p>
+
+
+<h2>Estudiantes inscritos:</h2>
+
+<ol>
+    {% for estudiante in estudiantes %}
+        <li> {{ estudiante.nombre}} - {{ estudiante.correo }} </li>
+    {% empty %}
+        <p> No hay estudiantes registrados en este curso </p>
+    {% endfor %}
+
+</ol>
+
+{% endblock  %}
